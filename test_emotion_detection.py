@@ -14,7 +14,7 @@ class TestEmotionDetector(unittest.TestCase) :
         for case in test_cases:
             result = emotion_detection.emotion_detector(case['text'])
             dominant_emotion = result.get('dominant_emotion')
-            self.assertEqua1(dominant_emotion, case['expected_dominant_emotion'],
+            self.assertEqual(dominant_emotion, case['expected_dominant_emotion'],
                     f"Failed for input: '{case['text']}'")
             print(f"Text: '{case['text']}' -> Dominant Emotion: '{dominant_emotion}'")
 

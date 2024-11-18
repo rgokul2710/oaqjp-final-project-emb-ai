@@ -13,6 +13,6 @@ def emotion_detector(text_to_analyse):
         result = response.json()['emotionPredictions'][0]['emotion']
         dominant_emotion = max(result, key=result.get)
         result['dominant_emotion'] = dominant_emotion
-        print(result)
+        return result
     else:
         print(f"Error {response.status_code}: {response.text}")
